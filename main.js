@@ -12,6 +12,7 @@ const App = {
     }
     return this.build(
       '#app',
+      locale,
       settings.avatar || '',
       settings.i18n || {},
       settings.social || []
@@ -19,15 +20,17 @@ const App = {
   },
   /**
    * @param {string} el
+   * @param {string} locale
    * @param {string} avatar
    * @param {Object} i18n
    * @param {Array} social
    */
-  build (el, avatar, i18n, social) {
+  build (el, locale, avatar, i18n, social) {
     const data = {
-      avatar: avatar,
-      i18n: i18n,
-      social: social
+      locale,
+      avatar,
+      i18n,
+      social
     }
     return new Vue({
       el: el,

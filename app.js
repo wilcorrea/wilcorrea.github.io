@@ -13,7 +13,7 @@ const App = {
       settings = {}
     }
     return this.build(
-      el || '#app',
+      el,
       locale,
       settings.avatar || '',
       settings.i18n || {},

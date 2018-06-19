@@ -1,8 +1,10 @@
 const App = {
   /**
+   * @param {string} el
+   *
    * @return {Vue}
    */
-  run () {
+  run (el) {
     let locale = get('l')
     if (!locale) {
       return browse(locale)
@@ -11,7 +13,7 @@ const App = {
       settings = {}
     }
     return this.build(
-      '#app',
+      el || '#app',
       locale,
       settings.avatar || '',
       settings.i18n || {},

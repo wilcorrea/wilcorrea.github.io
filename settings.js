@@ -2,7 +2,7 @@ const settings = {
   avatar: {
     'background-image': 'url(https://www.gravatar.com/avatar/3be9dea8668cb169e52f024a7a9cffb8?s=200)'
   },
-  locale: '',
+  locale: 'en_US',
   i18n: {
     'en_US': {
       header: 'Development and Management of Software Projects',

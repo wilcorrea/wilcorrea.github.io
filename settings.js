@@ -37,7 +37,7 @@ const settings = {
       class: 'fa fa-linkedin'
     },
     {
-      href: 'mailto:me@wilcorrea.rocks',
+      href: 'mailto:william@lyseon.tech',
       class: 'fa fa-envelope-o'
     }
   ]

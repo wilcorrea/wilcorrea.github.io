@@ -1,11 +1,11 @@
 const App = {
   /**
-   *
+   * @return {Vue}
    */
   run () {
     let locale = get('l')
     if (!locale) {
-      return window.location.href = window.location.href + '?l=en_US'
+      return browse(locale)
     }
     if (typeof settings === 'undefined') {
       settings = {}
@@ -24,6 +24,8 @@ const App = {
    * @param {string} avatar
    * @param {Object} i18n
    * @param {Array} social
+   *
+   * @return {Vue}
    */
   build (el, locale, avatar, i18n, social) {
     const data = {
@@ -45,6 +47,9 @@ const App = {
             return
           }
           return lang[index]
+        },
+        browse (locale) {
+          browse(locale)
         }
       },
       created () {

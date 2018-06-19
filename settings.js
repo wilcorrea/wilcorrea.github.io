@@ -26,10 +26,12 @@ const settings = {
       href: 'https://github.com/wilcorrea',
       class: 'fa fa-github',
     },
+    /*
     {
       href: 'https://instagram.com/wilcorrea',
       class: 'fa fa-instagram'
     },
+    */
     {
       href: 'https://linkedin.com/in/wilcorrea',
       class: 'fa fa-linkedin'

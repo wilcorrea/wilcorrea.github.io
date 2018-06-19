@@ -52,16 +52,20 @@
         border-radius: 120px;
       }
 
-      .social,
-      .social a {
+      .social, .languages,
+      .social a, .languages a {
         color: #526d7a;
         font-size: 1.5em;
         margin: 0 10px;
       }
 
-      .social {
+      .social, .languages {
         margin-top: 25px;
         margin-bottom: 20px;
+      }
+
+      .languages {
+        text-align: center;
       }
     </style>
   </head>
@@ -85,11 +89,13 @@
             <i :class="link.class" aria-hidden="true"></i>
           </a>
         </section>
-        <footer>
-          <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
+        <section class="languages">
           <template v-for="(language, key) in i18n">
             <a :key="key" href="javascript:void(0)" @click="browse(key)">{{ key }}</a>
           </template>
+        </section>
+        <footer>
+          <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
         </footer>
       </div>
     </div>

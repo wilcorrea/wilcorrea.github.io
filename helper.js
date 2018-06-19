@@ -1,3 +1,8 @@
+/**
+ * @param {string} locale
+ *
+ * @return {string}
+ */
 function get (name) {
   const url = window.location.href
   name = name.replace(/[\[\]]/g, '\\$&')
@@ -11,3 +16,13 @@ function get (name) {
   }
   return decodeURIComponent(results[2].replace(/\+/g, ' '))
 }
+
+/**
+ * @param {string} locale
+ *
+ * @return {boolean}
+ */
+function browse (locale) {
+  return window.location.href = window.location.href + '?l=' + locale
+}
+

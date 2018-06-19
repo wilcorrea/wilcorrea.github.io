@@ -95,7 +95,11 @@
         </section>
         <section class="languages">
           <template v-for="(language, key) in i18n">
-            <small><a :key="key" href="javascript:void(0)" @click="browse(key)">{{ key }}</a></small>
+            <small>
+              <i class="fas fa-language"></i>
+              &nbsp;
+              <a :key="key" href="javascript:void(0)" @click="browse(key)">{{ key }}</a>
+            </small>
           </template>
         </section>
         <footer>

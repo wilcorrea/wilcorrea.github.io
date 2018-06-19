@@ -7,7 +7,7 @@ const App = {
   run (el) {
     let locale = get('l')
     if (!locale) {
-      return browse(locale)
+      return browse('pt_BR')
     }
     if (typeof settings === 'undefined') {
       settings = {}

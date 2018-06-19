@@ -11,6 +11,76 @@
     <base href="/">
     <title>@wilcorrea</title>
     <script type="text/javascript" src="//unpkg.com/vue"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta name="theme-color" content="#ffffff">
+    <style type="text/css">
+      body {
+        background-color: #24292E;
+        padding: 20px;
+        font-family: Helvetica;
+      }
+
+      #app {
+        background: #fff;
+        border-radius: 4px;
+        padding: 5px 20px 20px 20px;
+        max-width: 670px;
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 0 20px 20px 20px;
+        text-align: center;
+      }
+
+      #avatar {
+        height: 200px;
+        width: 200px;
+        background-image: url('https://www.gravatar.com/avatar/3be9dea8668cb169e52f024a7a9cffb8?s=200');
+        background-position: center;
+        background-size: contains;
+        background-repeat: no-repeat;
+        border-radius: 120px;
+      }
+
+      .social,
+      .social a {
+        color: #526d7a;
+        font-size: 1.5em;
+        margin: 0 10px;
+      }
+
+      .social {
+        margin-top: 25px;
+        margin-bottom: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body lang="en-US">
+    <div id="app">
+      <div v-if="locale" class="row">
+        <header class="col-sm-12">
+          <h3>{{ lang('header') }}</h3>
+        </header>
+        <div class="col-sm-4">
+          <div id="avatar"></div>
+        </div>
+        <div class="col-sm-8 text-justify">
+          {{ lang('bio') }}
+        </div>
+      </div>
+      <section v-if="locale" class="social text-center">
+        <a v-for="(link, key) in social" :key="key" :href="link.href">
+          <i :class="link.class" aria-hidden="true"></i>
+        </a>
+      </section>
+      <footer>
+        <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
+      </footer>
+    </div>
     <script type="text/javascript">
       new Vue({
         el: '#app',
@@ -86,76 +156,6 @@
         }
       })
     </script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <meta name="theme-color" content="#ffffff">
-    <style type="text/css">
-      body {
-        background-color: #24292E;
-        padding: 20px;
-        font-family: Helvetica;
-      }
-
-      #app {
-        background: #fff;
-        border-radius: 4px;
-        padding: 5px 20px 20px 20px;
-        max-width: 670px;
-        margin: 0 auto;
-      }
-
-      header {
-        padding: 0 20px 20px 20px;
-        text-align: center;
-      }
-
-      #avatar {
-        height: 200px;
-        width: 200px;
-        background-image: url('https://www.gravatar.com/avatar/3be9dea8668cb169e52f024a7a9cffb8?s=200');
-        background-position: center;
-        background-size: contains;
-        background-repeat: no-repeat;
-        border-radius: 120px;
-      }
-
-      .social,
-      .social a {
-        color: #526d7a;
-        font-size: 1.5em;
-        margin: 0 10px;
-      }
-
-      .social {
-        margin-top: 25px;
-        margin-bottom: 20px;
-      }
-
-    </style>
-  </head>
-
-  <body lang="en-US">
-    <div id="app">
-      <div v-if="locale" class="row">
-        <header class="col-sm-12">
-          <h3>{{ lang('header') }}</h3>
-        </header>
-        <div class="col-sm-4">
-          <div id="avatar"></div>
-        </div>
-        <div class="col-sm-8 text-justify">
-          {{ lang('bio') }}
-        </div>
-      </div>
-      <section v-if="locale" class="social text-center">
-        <a v-for="(link, key) in social" :key="key" :href="link.href">
-          <i :class="link.class" aria-hidden="true"></i>
-        </a>
-      </section>
-      <footer>
-        <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
-      </footer>
-    </div>
   </body>
 
 </html>

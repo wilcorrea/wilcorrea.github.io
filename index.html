@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="description" content="William Correa">
     <meta name="keywords" content="blog,developer,php,java,delphi,vuejs,react,javascript,shell">
-    <base href="/">
     <title>@wilcorrea</title>
+
     <script type="text/javascript" src="//unpkg.com/vue"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="helper.js"></script>
+    <script type="text/javascript" src="settings.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
     <meta name="theme-color" content="#ffffff">
     <style type="text/css">
-      body {
+      #body {
+        position: absolute;
+        height: 100%;
+        width: 100%;
         background-color: #24292E;
         padding: 20px;
         font-family: Helvetica;
@@ -37,7 +46,6 @@
       #avatar {
         height: 200px;
         width: 200px;
-        background-image: url('https://www.gravatar.com/avatar/3be9dea8668cb169e52f024a7a9cffb8?s=200');
         background-position: center;
         background-size: contains;
         background-repeat: no-repeat;
@@ -55,106 +63,36 @@
         margin-top: 25px;
         margin-bottom: 20px;
       }
-
     </style>
   </head>
 
-  <body lang="en-US">
-    <div id="app">
-      <div v-if="locale" class="row">
-        <header class="col-sm-12">
-          <h3>{{ lang('header') }}</h3>
-        </header>
-        <div class="col-sm-4">
-          <div id="avatar"></div>
+  <body>
+    <div id="body">
+      <div id="app">
+        <div v-if="locale" class="row">
+          <header class="col-sm-12">
+            <h3>{{ lang('header') }}</h3>
+          </header>
+          <div class="col-sm-4">
+            <div id="avatar":style="avatar"></div>
+          </div>
+          <div class="col-sm-8 text-justify">
+            {{ lang('bio') }}
+          </div>
         </div>
-        <div class="col-sm-8 text-justify">
-          {{ lang('bio') }}
-        </div>
+        <section v-if="locale" class="social text-center">
+          <a v-for="(link, key) in social" :key="key" :href="link.href">
+            <i :class="link.class" aria-hidden="true"></i>
+          </a>
+        </section>
+        <footer>
+          <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
+        </footer>
       </div>
-      <section v-if="locale" class="social text-center">
-        <a v-for="(link, key) in social" :key="key" :href="link.href">
-          <i :class="link.class" aria-hidden="true"></i>
-        </a>
-      </section>
-      <footer>
-        <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
-      </footer>
     </div>
+
     <script type="text/javascript">
-      new Vue({
-        el: '#app',
-        data: () => ({
-          locale: '',
-          i18n: {
-            'en_US': {
-              header: 'Development and Management of Software Projects',
-              bio: 'I work with software development since 2007. I am a bachelor in Computer Science and I try to stay in line with the market. I currently work as Software Engineer at Fagoc (@fagoc.br) and am co-founder and Analyst at Lyseon Tech (@lyseon.tech). I try to move the PHP Group from Zona da Mata where I publish web development materials on the blog and in the community channel. I am always in contact with groups and communities of VueJS, PHP and other technologies throughout Brazil, taking the word of Engineering and Software Architecture in search of producing quality applications.'
-            },
-            'pt_BR': {
-              header: 'Desenvolvimento e Gestão de Projetos de Software',
-              bio: 'Trabalho com desenvolvimento de softwares desde 2007. Sou bacharel em Ciência da Computação e procuro manter-me alinhado ao mercado. Atualmente atuo como Engenheiro de Software na Fagoc (@fagoc.br) e sou co-fundador e Analista na Lyseon Tech (@lyseon.tech). Procuro movimentar o Grupo de PHP da Zona da Mata onde publico materiais sobre desenvolvimento web no blog e no canal da comunidade. Estou sempre em contato com grupos e comunidades de VueJS, PHP e outras tecnologias pelo Brasil afora levando a palavra da Engenharia e Arquitetura de Software em busca de produzirmos aplicações de qualidade.'
-            }
-          },
-          social: [
-            {
-              href: 'https://twitter.com/wilcorrea',
-              class: 'fa fa-twitter'
-            },
-            {
-              href: 'https://facebook.com/wilcorrea.rocks',
-              class: 'fa fa-facebook-official'
-            },
-            {
-              href: 'https://github.com/wilcorrea',
-              class: 'fa fa-github',
-            },
-            {
-              href: 'https://instagram.com/wilcorrea',
-              class: 'fa fa-instagram'
-            },
-            {
-              href: 'https://linkedin.com/in/wilcorrea',
-              class: 'fa fa-linkedin'
-            },
-            {
-              href: 'mailto:me@wilcorrea.rocks',
-              class: 'fa fa-envelope-o'
-            }
-          ]
-        }),
-        methods: {
-          lang (index) {
-            if (!this.i18n[this.locale]) {
-              return
-            }
-            const lang = this.i18n[this.locale]
-            if (!lang[index]) {
-              return
-            }
-            return lang[index]
-          },
-          get (name) {
-            const url = window.location.href
-            name = name.replace(/[\[\]]/g, '\\$&')
-            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
-            const results = regex.exec(url)
-            if (!results) {
-              return null
-            }
-            if (!results[2]) {
-              return ''
-            }
-            return decodeURIComponent(results[2].replace(/\+/g, ' '))
-          }
-        },
-        created () {
-          this.locale = this.get('l')
-          if (!this.locale) {
-            this.locale = 'en_US'
-          }
-        }
-      })
+      App.run()
     </script>
   </body>
 

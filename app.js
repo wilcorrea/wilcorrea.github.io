@@ -5,12 +5,12 @@ const App = {
    * @return {Vue}
    */
   run (el) {
+    if (typeof settings === 'undefined') {
+      return
+    }
     let locale = get('l')
     if (!locale) {
-      return browse('pt_BR')
-    }
-    if (typeof settings === 'undefined') {
-      settings = {}
+      return browse(settings.locale)
     }
     return this.build(
       el,

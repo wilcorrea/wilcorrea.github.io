@@ -23,6 +23,8 @@ function get (name) {
  * @return {boolean}
  */
 function browse (locale) {
-  return window.location.href = window.location.href + '?l=' + locale
+  const origin = window.location.origin
+  const pathname = window.location.pathname
+  return window.location.href = origin + pathname + '?l=' + locale
 }
 

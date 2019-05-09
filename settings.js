@@ -6,11 +6,11 @@ const settings = {
   i18n: {
     'en_US': {
       header: 'Development and Management of Software Projects',
-      bio: 'I work with software development since 2007. I am a bachelor in Computer Science and I try to stay in line with the market. I currently work as Software Engineer at Fagoc (@fagoc.br) and am co-founder and Analyst at Lyseon Tech (@lyseon.tech). I try to move the PHP Group from Zona da Mata where I publish web development materials on the blog and in the community channel. I am always in contact with groups and communities of VueJS, PHP and other technologies throughout Brazil, taking the word of Engineering and Software Architecture in search of producing quality applications.'
+      bio: 'I work with software development since 2007. I have a bachelor\'s degree in Computer Science and I try to keep in line with the market. I am always in touch with groups and communities of VueJS, PHP and other technologies throughout Brazil, taking the word of engineering and software architecture in search of producing applications and quality systems. I write articles and do lectures with themes from git and devops to Javascript and VueJS.'
     },
     'pt_BR': {
       header: 'Desenvolvimento e Gestão de Projetos de Software',
-      bio: 'Trabalho com desenvolvimento de softwares desde 2007. Sou bacharel em Ciência da Computação e procuro manter-me alinhado ao mercado. Atualmente atuo como Engenheiro de Software na Fagoc (@fagoc.br) e sou co-fundador e Analista na Lyseon Tech (@lyseon.tech). Procuro movimentar o Grupo de PHP da Zona da Mata onde publico materiais sobre desenvolvimento web no blog e no canal da comunidade. Estou sempre em contato com grupos e comunidades de VueJS, PHP e outras tecnologias pelo Brasil afora levando a palavra da Engenharia e Arquitetura de Software em busca de produzirmos aplicações de qualidade.'
+      bio: 'Trabalho com desenvolvimento de software desde 2007. Sou bacharel em Ciência da Computação e tento me manter alinhado com o mercado. Estou sempre em contato com grupos e comunidades de VueJS, PHP e outras tecnologias em todo o Brasil, levando a palavra de engenharia e arquitetura de software em busca de produzir aplicativos e sistemas de qualidade. Eu escrevo artigos e faço palestras com temas desde git e devops até Javascript e VueJS.'
     }
   },
   social: [

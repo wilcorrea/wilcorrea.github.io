@@ -6,7 +6,7 @@ const settings = {
   i18n: {
     'en_US': {
       header: 'Development and Management of Software Projects',
-      bio: 'I work with software development since 2007. I have a bachelor\'s degree in Computer Science and I try to keep in line with the market. I am always in touch with groups and communities of VueJS, PHP and other technologies throughout Brazil, taking the word of engineering and software architecture in search of producing applications and quality systems. I write articles and do lectures with themes from git and devops to Javascript and VueJS.'
+      bio: 'I work with software development since 2007. I have a bachelor\'s degree in Computer Science and I try to keep in line with the market. I am always in touch with groups and communities of VueJS, PHP and other technologies throughout Brazil. I am best praticies evangelist in engineering and software architecture in search of producing applications and quality systems. I write articles and do lectures with themes from git and devops to Javascript and VueJS.'
     },
     'pt_BR': {
       header: 'Desenvolvimento e Gestão de Projetos de Software',

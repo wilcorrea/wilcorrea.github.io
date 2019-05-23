@@ -26,15 +26,17 @@ const settings = {
       href: 'https://github.com/wilcorrea',
       class: 'fa fa-github',
     },
-    /*
     {
       href: 'https://instagram.com/wilcorrea',
       class: 'fa fa-instagram'
     },
-    */
     {
       href: 'https://linkedin.com/in/wilcorrea',
       class: 'fa fa-linkedin'
+    },
+    {
+      href: 'http://lattes.cnpq.br/5492287567035269',
+      class: 'fa fa-graduation-cap'
     },
     {
       href: 'mailto:william@lyseon.tech',

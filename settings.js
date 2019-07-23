@@ -15,6 +15,26 @@ const settings = {
   },
   social: [
     {
+      href: 'https://github.com/wilcorrea',
+      class: 'fa fa-github',
+    },
+    {
+      href: 'https://gitlab.com/wilcorrea',
+      class: 'fa fa-gitlab',
+    },
+    {
+      href: 'https://github.com/wilcorrea',
+      class: 'fa fa-github',
+    },
+    {
+      href: 'https://slides.com/wilcorrea',
+      class: 'fa fa-slideshare'
+    },
+    {
+      href: 'http://lattes.cnpq.br/5492287567035269',
+      class: 'fa fa-graduation-cap'
+    },
+    {
       href: 'https://twitter.com/wilcorrea',
       class: 'fa fa-twitter'
     },
@@ -23,20 +43,8 @@ const settings = {
       class: 'fa fa-facebook-official'
     },
     {
-      href: 'https://github.com/wilcorrea',
-      class: 'fa fa-github',
-    },
-    {
       href: 'https://instagram.com/wilcorrea',
       class: 'fa fa-instagram'
-    },
-    {
-      href: 'https://linkedin.com/in/wilcorrea',
-      class: 'fa fa-linkedin'
-    },
-    {
-      href: 'http://lattes.cnpq.br/5492287567035269',
-      class: 'fa fa-graduation-cap'
     },
     {
       href: 'mailto:william@lyseon.tech',

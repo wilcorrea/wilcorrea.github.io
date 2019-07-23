@@ -23,6 +23,10 @@ const settings = {
       class: 'fa fa-gitlab',
     },
     {
+      href: 'https://medium.com/@wilcorrea',
+      class: 'fa fa-medium'
+    },
+    {
       href: 'https://slides.com/wilcorrea',
       class: 'fa fa-slideshare'
     },

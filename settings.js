@@ -47,7 +47,7 @@ const settings = {
       class: 'fa fa-instagram'
     },
     {
-      href: 'mailto:william@lyseon.tech',
+      href: 'mailto:wilcorrea@gmail.com',
       class: 'fa fa-envelope-o'
     }
   ]

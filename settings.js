@@ -15,6 +15,10 @@ const settings = {
   },
   social: [
     {
+      href: 'https://blog.wilcorrea.dev',
+      class: 'fa fa-book'
+    },
+    {
       href: 'https://github.com/wilcorrea',
       class: 'fa fa-github',
     },
@@ -39,8 +43,12 @@ const settings = {
       class: 'fa fa-twitter'
     },
     {
-      href: 'https://facebook.com/wilcorrea.rocks',
+      href: 'https://www.facebook.com/wilcorreareal',
       class: 'fa fa-facebook-official'
+    },
+    {
+      href: 'https://www.twitch.tv/wilcorreareal',
+      class: 'fa fa-twitch'
     },
     {
       href: 'https://instagram.com/wilcorrea',

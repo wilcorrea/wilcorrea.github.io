@@ -15,7 +15,7 @@ const settings = {
   },
   social: [
     {
-      href: 'https://blog.wilcorrea.dev',
+      href: 'https://blog.devi.tools',
       class: 'fa fa-book'
     },
     {

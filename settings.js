@@ -43,19 +43,15 @@ const settings = {
       class: 'fa fa-twitter'
     },
     {
-      href: 'https://www.facebook.com/wilcorreareal',
+      href: 'https://www.facebook.com/wilcorrea.dev',
       class: 'fa fa-facebook-official'
-    },
-    {
-      href: 'https://www.twitch.tv/wilcorreareal',
-      class: 'fa fa-twitch'
     },
     {
       href: 'https://instagram.com/wilcorrea',
       class: 'fa fa-instagram'
     },
     {
-      href: 'mailto:wilcorrea@gmail.com',
+      href: 'mailto:hey@wilcorrea.dev',
       class: 'fa fa-envelope-o'
     }
   ]

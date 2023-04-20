@@ -1,155 +1,240 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="content-type"
+        content="text/html; charset=utf-8"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link
+        rel="stylesheet"
+        href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"
+    >
+    <link
+        rel="stylesheet"
+        href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    >
 
-    <script type="text/javascript" src="helper.js"></script>
-    <script type="text/javascript" src="settings.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script
+        type="text/javascript"
+        src="helper.js"
+    ></script>
+    <script
+        type="text/javascript"
+        src="settings.js"
+    ></script>
+    <script
+        type="text/javascript"
+        src="app.js"
+    ></script>
 
     <title>@wilcorrea</title>
 
-    <link rel="icon" href="favicon.png" type="image/png">
-    <meta name="description" content="William Correa">
-    <meta name="keywords" content="developer,php,java,delphi,vuejs,react,javascript,shell">
-    <meta name="theme-color" content="#24292E">
-    <meta property="og:site_name" content="">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-    <meta property="og:type" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+    <meta
+        name="description"
+        content="William Correa"
+    >
+    <meta
+        name="keywords"
+        content="developer,php,java,delphi,vuejs,react,javascript,shell"
+    >
+    <meta
+        name="theme-color"
+        content="#24292E"
+    >
+    <meta
+        property="og:site_name"
+        content=""
+    >
+    <meta
+        property="og:title"
+        content=""
+    >
+    <meta
+        property="og:image"
+        content=""
+    >
+    <meta
+        property="og:type"
+        content=""
+    >
+    <meta
+        property="og:description"
+        content=""
+    >
+    <meta
+        property="og:url"
+        content=""
+    >
 
     <style type="text/css">
-      #body {
-        position: absolute;
-        min-height: 100%;
-        min-width: 100%;
-        background-color: #24292E;
-        padding: 20px;
-        font-family: Helvetica;
-      }
+    #body {
+      position: absolute;
+      min-height: 100%;
+      min-width: 100%;
+      background-color: #24292E;
+      padding: 20px;
+      font-family: Helvetica;
+    }
 
-      #app {
-        background: #fff;
-        border-radius: 4px;
-        padding: 5px 20px 20px 20px;
-        max-width: 670px;
-        margin: 0 auto;
-      }
+    #app {
+      background: #fff;
+      border-radius: 4px;
+      padding: 5px 20px 20px 20px;
+      max-width: 670px;
+      margin: 0 auto;
+    }
 
-      header {
-        padding: 0 20px 20px 20px;
-      }
+    header {
+      padding: 0 20px 20px 20px;
+    }
 
-      footer, header, .languages {
-        text-align: center;
-      }
+    footer, header, .languages {
+      text-align: center;
+    }
 
-      #avatar {
-        height: 200px;
-        width: 200px;
-        margin: 0 auto 20px auto;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 120px;
-        box-shadow: 0 0 4px rgba(0,0,0,0.5), 0 4px 8px rgba(0,0,0,0.2);
-      }
+    #avatar {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto 20px auto;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-radius: 120px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-      a, .social, .languages {
-        color: #526d7a;
-      }
-      
-      a:hover {
-        text-decoration: none;
-      }
-      
-      .social a, .languages a {
-        margin: 0 10px;
-      }
+    a, .social, .languages {
+      color: #526d7a;
+    }
 
-      .social,
-      .social a {
-        font-size: 1.5em;
-      }
+    a:hover {
+      text-decoration: none;
+    }
 
-      .social, .languages {
-        margin-top: 25px;
-        margin-bottom: 20px;
-      }
-      
-      .nerd {
-        padding: 20px;
-      }
+    .social a, .languages a {
+      margin: 0 10px;
+    }
+
+    .social,
+    .social a {
+      font-size: 1.5em;
+    }
+
+    .social, .languages {
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+
+    .nerd {
+      padding: 20px;
+    }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="body">
-      <div id="app">
-        <div v-if="locale" class="row">
-          <header class="col-sm-12">
-            <h3>{{ lang('header') }}</h3>
-          </header>
-          <div class="col-sm-4">
-            <div id="avatar":style="avatar"></div>
-            <a 
-               target="_blank"
-               href="https://raw.githubusercontent.com/wilcorrea/wilcorrea.github.io/master/profile.jpg"
+        <div id="app">
+            <div
+                v-if="locale"
+                class="row"
             >
-              [download]
-            </a>
-          </div>
-          
-          <div class="col-sm-8 text-justify">
-            <h3>{{ lang('top') }}</h3>
-            <p>{{ lang('bio') }}</p>
-          </div>
-          <div class="col-sm-8 text-justify">
-            <h3>{{ lang('footer') }}</h3>
-            <p>{{ lang('minibio') }}</p>
-          </div>
+                <header class="col-sm-12">
+                    <h3>{{ lang('header') }}</h3>
+                </header>
+                <div class="col-sm-4">
+                    <div
+                        id="avatar"
+                        :style="avatar"
+                    ></div>
+                    <a
+                        target="_blank"
+                        href="https://raw.githubusercontent.com/wilcorrea/wilcorrea.github.io/master/profile.jpg"
+                    >
+                        [download]
+                    </a>
+                </div>
+
+                <div class="col-sm-8 text-justify">
+                    <h3>{{ lang('top') }}</h3>
+                    <p>{{ lang('bio') }}</p>
+                </div>
+                <div class="col-sm-8 text-justify">
+                    <h3>{{ lang('footer') }}</h3>
+                    <p>{{ lang('minibio') }}</p>
+                </div>
+            </div>
+            <div class="row nerd">
+                <div>Nerd stats:</div>
+                <a href="https://profile.codersrank.io/user/wilcorrea">codersrank.io</a>
+                |
+                <a href="https://codetrace.com/users/wilcorrea">codetrace.com</a>
+            </div>
+            <section
+                v-if="locale"
+                class="social text-center"
+            >
+                <a
+                    v-for="(link, key) in social"
+                    :key="key"
+                    :href="link.href"
+                >
+                    <i
+                        :class="link.class"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+            </section>
+            <section class="languages">
+                <i class="fa fa-language"></i>&nbsp;
+                <template v-for="(language, key) in i18n">
+                    <small>
+                        <a
+                            :key="key"
+                            href="javascript:void(0)"
+                            @click="browse(key)"
+                        >{{ key }}
+                        </a>
+                    </small>
+                </template>
+            </section>
+            <footer>
+                <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
+                &nbsp;|&nbsp;
+                <small>
+                    <a
+                        href="https://github.com/wilcorrea/wilcorrea.github.io"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-clone"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+                </small>
+            </footer>
         </div>
-        <div class="row nerd">
-          <div>Nerd stats:</div>
-          <a href="https://profile.codersrank.io/user/wilcorrea">codersrank.io</a>
-          | <a href="https://codetrace.com/users/wilcorrea">codetrace.com</a>
-        </div>
-        <section v-if="locale" class="social text-center">
-          <a v-for="(link, key) in social" :key="key" :href="link.href">
-            <i :class="link.class" aria-hidden="true"></i>
-          </a>
-        </section>
-        <section class="languages">
-          <i class="fa fa-language"></i>&nbsp;
-          <template v-for="(language, key) in i18n">
-            <small><a :key="key" href="javascript:void(0)" @click="browse(key)">{{ key }}</a></small>
-          </template>
-        </section>
-        <footer>
-          <small><i> &lt;app&gt;&lt;life/&gt;&lt;/app&gt; </i></small>
-          &nbsp;|&nbsp;
-          <small>
-            <a href="https://github.com/wilcorrea/wilcorrea.github.io" target="_blank">
-              <i class="fa fa-clone" aria-hidden="true"></i>
-            </a>
-          </small>
-        </footer>
-      </div>
     </div>
 
     <script type="text/javascript">
-      App.run('#app')
+    App.run('#app')
     </script>
-  </body>
-
+</body>
 </html>

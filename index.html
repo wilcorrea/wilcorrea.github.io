@@ -98,7 +98,7 @@
       <div id="app">
         <div v-if="locale" class="row">
           <header class="col-sm-12">
-            <h3>{{ lang('top') }}</h3>
+            <h3>{{ lang('header') }}</h3>
           </header>
           <div class="col-sm-4">
             <a 
@@ -108,13 +108,14 @@
               <div id="avatar":style="avatar"></div>
             </a>
           </div>
-          <h3>{{ lang('resume') }}</h3>
+          
           <div class="col-sm-8 text-justify">
-            {{ lang('bio') }}
+            <h3>{{ lang('resume') }}</h3>
+            <p>{{ lang('bio') }}</p>
           </div>
-          <h3>{{ lang('footer') }}</h3>
           <div class="col-sm-8 text-justify">
-            {{ lang('minibio') }}
+            <h3>{{ lang('footer') }}</h3>
+            <p>{{ lang('minibio') }}</p>
           </div>
         </div>
         <div class="row nerd">

@@ -16,15 +16,15 @@ const Index = () => {
     const langFromUrl = searchParams.get("lang");
     if (langFromUrl && (langFromUrl === "en" || langFromUrl === "pt")) {
       setCurrentLang(langFromUrl);
-    } else {
+    } else if (!langFromUrl) {
       // Set default language in URL if not present
-      setSearchParams({ lang: "en" }, { replace: true });
+      setSearchParams({ lang: "en" });
     }
-  }, [searchParams, setSearchParams]);
+  }, []);
 
   const handleLanguageChange = (lang: string) => {
     setCurrentLang(lang);
-    setSearchParams({ lang }, { replace: true });
+    setSearchParams({ lang });
   };
 
   return (

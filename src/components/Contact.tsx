@@ -55,7 +55,7 @@ const Contact = ({ currentLang }: ContactProps) => {
       icon: MessageCircle,
       title: t.schedule,
       description: currentLang === "pt" ? "Vamos marcar uma conversa" : "Let's schedule a chat",
-      action: "https://t.me/wilcorrea",
+      action: "https://calendly.com/wilcorrea",
       color: "from-green-500 to-emerald-500"
     },
     {

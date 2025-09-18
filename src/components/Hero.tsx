@@ -55,7 +55,7 @@ const Hero = ({ currentLang }: HeroProps) => {
     },
     {
       icon: Mail,
-      href: "mailto:wil@wilcorrea.dev",
+      href: "mailto:hi@wilcorrea.dev",
       label: "Email"
     }
   ];

@@ -11,7 +11,7 @@ const Hero = ({ currentLang }: HeroProps) => {
     en: {
       greeting: "Hello, I'm",
       name: "William Correa",
-      title: "Software Developer, Speaker, Teacher",
+      title: "Developer, Speaker, Teacher",
       description: "17+ years of experience crafting efficient solutions with PHP, TypeScript, and full-stack development. Passionate about teaching, speaking at tech events, and building collaborative communities.",
       cta: "Let's Connect",
       downloadResume: "Download Resume",
@@ -20,7 +20,7 @@ const Hero = ({ currentLang }: HeroProps) => {
     pt: {
       greeting: "Olá, eu sou",
       name: "William Correa", 
-      title: "Desenvolvedor de Software, Palestrante, Professor",
+      title: "Desenvolvedor, Palestrante, Professor",
       description: "17+ anos de experiência criando soluções eficientes com PHP, TypeScript e desenvolvimento full-stack. Apaixonado por ensinar, palestrar em eventos tech e construir comunidades colaborativas.",
       cta: "Vamos Conversar",
       downloadResume: "Baixar Currículo",

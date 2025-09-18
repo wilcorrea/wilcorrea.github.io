@@ -61,8 +61,8 @@ const Hero = ({ currentLang }: HeroProps) => {
   ];
 
   return (
-    <section id="home" className="hero-section flex items-center justify-center relative overflow-hidden">
-      <div className="container mx-auto px-4 py-20">
+    <section id="home" className="hero-section flex items-center justify-center overflow-hidden">
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20">
           {/* Profile Image */}
           <div className="animate-fade-in">
@@ -90,12 +90,16 @@ const Hero = ({ currentLang }: HeroProps) => {
                   <span className="text-foreground">Desenvolvedor</span>
                   <span className="highlight-text mx-2">&</span>
                   <span className="highlight-text">Palestrante</span>
+                  <span className="highlight-text mx-2">&</span>
+                  <span className="highlight-text">Professor</span>
                 </>
               ) : (
                 <>
                   <span className="text-foreground">Developer</span>
                   <span className="highlight-text mx-2">&</span>
                   <span className="highlight-text">Speaker</span>
+                  <span className="highlight-text mx-2">&</span>
+                  <span className="highlight-text">Teacher</span>
                 </>
               )}
             </h2>

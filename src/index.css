@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
+    --background: 0 0% 100%;
     --foreground: 220 25% 12%;
 
     --card: 0 0% 100%;
@@ -25,10 +25,10 @@
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 50%;
 
-    --accent: 320 65% 65%;
+    --accent: 270 60% 65%;
     --accent-foreground: 0 0% 98%;
     
-    --highlight: 340 75% 65%;
+    --highlight: 320 70% 60%;
     --highlight-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,20 +36,20 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 235 65% 55%;
+    --ring: 235 70% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom gradients inspired by modern design */
-    --gradient-primary: linear-gradient(135deg, hsl(235 70% 58%), hsl(270 65% 62%), hsl(320 65% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(235 70% 15% / 0.95), hsl(270 65% 18% / 0.9), hsl(320 65% 20% / 0.85));
-    --gradient-text-highlight: linear-gradient(135deg, hsl(320 75% 68%), hsl(340 75% 65%));
+    /* Custom gradients for light mode */
+    --gradient-primary: linear-gradient(135deg, hsl(235 70% 58%), hsl(270 60% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 98%), hsl(235 20% 96%));
+    --gradient-text-highlight: linear-gradient(135deg, hsl(270 60% 65%), hsl(320 70% 60%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(235 65% 55% / 0.2);
-    --shadow-glow: 0 0 40px hsl(235 85% 65% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(220 25% 12% / 0.1);
+    /* Shadows for light mode */
+    --shadow-elegant: 0 10px 30px -10px hsl(235 70% 58% / 0.15);
+    --shadow-glow: 0 0 40px hsl(235 85% 68% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(220 25% 12% / 0.08);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,6 +154,18 @@
   .hero-section {
     background: var(--gradient-hero);
     min-height: 100vh;
+    position: relative;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.05), transparent 70%);
+    pointer-events: none;
   }
 
   .card-elegant {

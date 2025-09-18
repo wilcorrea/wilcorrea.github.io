@@ -47,22 +47,22 @@ const Contact = ({ currentLang }: ContactProps) => {
     {
       icon: Mail,
       title: t.email,
-      description: "wil@wilcorrea.dev",
-      action: "mailto:wil@wilcorrea.dev",
+      description: "hi@wilcorrea.dev",
+      action: "mailto:hi@wilcorrea.dev",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: MessageCircle,
       title: t.schedule,
       description: currentLang === "pt" ? "Vamos marcar uma conversa" : "Let's schedule a chat",
-      action: "mailto:wil@wilcorrea.dev?subject=Schedule a Call",
+      action: "mailto:hi@wilcorrea.dev?subject=Schedule a Call",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Coffee,
       title: t.coffee,
       description: currentLang === "pt" ? "Para um papo descontraído" : "For a casual conversation",
-      action: "mailto:wil@wilcorrea.dev?subject=Coffee Chat",
+      action: "mailto:hi@wilcorrea.dev?subject=Coffee Chat",
       color: "from-amber-500 to-orange-500"
     }
   ];

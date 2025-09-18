@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -7,10 +8,23 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [currentLang, setCurrentLang] = useState<string>("en");
+
+  // Initialize language from URL or default to "en"
+  useEffect(() => {
+    const langFromUrl = searchParams.get("lang");
+    if (langFromUrl && (langFromUrl === "en" || langFromUrl === "pt")) {
+      setCurrentLang(langFromUrl);
+    } else {
+      // Set default language in URL if not present
+      setSearchParams({ lang: "en" }, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
 
   const handleLanguageChange = (lang: string) => {
     setCurrentLang(lang);
+    setSearchParams({ lang }, { replace: true });
   };
 
   return (

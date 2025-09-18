@@ -18,7 +18,7 @@ const Experience = ({ currentLang }: ExperienceProps) => {
       viewProfile: "View Profile",
       nerdStats: "Developer Stats",
       since2007: "Coding since 2007",
-      experience: "17+ Years of Experience",
+      experience: "~20 Years of Experience",
       projects: "Countless Projects Delivered",
       communities: "Active in Tech Communities"
     },
@@ -32,7 +32,7 @@ const Experience = ({ currentLang }: ExperienceProps) => {
       viewProfile: "Ver Perfil",
       nerdStats: "Estatísticas de Desenvolvedor",
       since2007: "Programando desde 2007",
-      experience: "17+ Anos de Experiência",
+      experience: "~20 Anos de Experiência",
       projects: "Inúmeros Projetos Entregues",
       communities: "Ativo em Comunidades Tech"
     }
@@ -64,7 +64,7 @@ const Experience = ({ currentLang }: ExperienceProps) => {
       icon: "📅"
     },
     {
-      number: "17+",
+      number: "~20",
       label: currentLang === "pt" ? "Anos" : "Years",
       icon: "⚡"
     },

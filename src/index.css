@@ -42,7 +42,7 @@
 
     /* Custom gradients for light mode */
     --gradient-primary: linear-gradient(135deg, hsl(235 70% 58%), hsl(270 60% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 98%), hsl(235 20% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 92%), hsl(235 40% 88%), hsl(270 35% 90%));
     --gradient-text-highlight: linear-gradient(135deg, hsl(270 60% 65%), hsl(320 70% 60%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
     
@@ -107,7 +107,7 @@
     
     /* Dark mode gradients */
     --gradient-primary: linear-gradient(135deg, hsl(235 85% 68%), hsl(270 70% 70%), hsl(320 70% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(235 70% 15% / 0.95), hsl(270 65% 18% / 0.9), hsl(320 65% 20% / 0.85));
+    --gradient-hero: linear-gradient(135deg, hsl(235 60% 25%), hsl(270 55% 28%), hsl(320 50% 30%));
     --gradient-text-highlight: linear-gradient(135deg, hsl(320 80% 72%), hsl(340 80% 70%));
     --gradient-card: linear-gradient(145deg, hsl(220 25% 12%), hsl(220 25% 10%));
     
@@ -164,7 +164,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.05), transparent 70%);
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), transparent 70%);
     pointer-events: none;
   }
 
@@ -189,10 +189,6 @@
 
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
   }
 }
 
@@ -221,14 +217,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }

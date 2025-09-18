@@ -1,17 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Twitter, Mail, ExternalLink } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
+import { useState, useEffect } from "react";
 
 interface HeroProps {
   currentLang: string;
 }
 
 const Hero = ({ currentLang }: HeroProps) => {
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+  
   const content = {
     en: {
       greeting: "Hello, I'm",
       name: "William Correa",
       title: "Developer, Speaker, Teacher",
+      typingTexts: ["Developer", "Speaker", "Teacher"],
       description: "17+ years of experience crafting efficient solutions with PHP, TypeScript, and full-stack development. Passionate about teaching, speaking at tech events, and building collaborative communities.",
       cta: "Let's Connect",
       downloadResume: "Download Resume",
@@ -21,6 +26,7 @@ const Hero = ({ currentLang }: HeroProps) => {
       greeting: "Olá, eu sou",
       name: "William Correa", 
       title: "Desenvolvedor, Palestrante, Professor",
+      typingTexts: ["Desenvolvedor", "Palestrante", "Professor"],
       description: "17+ anos de experiência criando soluções eficientes com PHP, TypeScript e desenvolvimento full-stack. Apaixonado por ensinar, palestrar em eventos tech e construir comunidades colaborativas.",
       cta: "Vamos Conversar",
       downloadResume: "Baixar Currículo",
@@ -29,6 +35,54 @@ const Hero = ({ currentLang }: HeroProps) => {
   };
 
   const t = content[currentLang as keyof typeof content];
+  
+  useEffect(() => {
+    const texts = t.typingTexts;
+    let currentIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    let timeout: NodeJS.Timeout;
+
+    const type = () => {
+      const currentText = texts[currentIndex];
+      
+      if (isDeleting) {
+        setTypedText(currentText.substring(0, currentCharIndex - 1));
+        currentCharIndex--;
+        
+        if (currentCharIndex === 0) {
+          isDeleting = false;
+          currentIndex = (currentIndex + 1) % texts.length;
+          timeout = setTimeout(type, 500);
+        } else {
+          timeout = setTimeout(type, 50);
+        }
+      } else {
+        setTypedText(currentText.substring(0, currentCharIndex + 1));
+        currentCharIndex++;
+        
+        if (currentCharIndex === currentText.length) {
+          timeout = setTimeout(() => {
+            isDeleting = true;
+            type();
+          }, 2000);
+        } else {
+          timeout = setTimeout(type, 100);
+        }
+      }
+    };
+
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    timeout = setTimeout(type, 1000);
+    
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(cursorInterval);
+    };
+  }, [currentLang]);
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -67,7 +121,7 @@ const Hero = ({ currentLang }: HeroProps) => {
           {/* Profile Image */}
           <div className="animate-fade-in">
             <div className="relative">
-              <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden card-elegant animate-float">
+              <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden card-elegant">
                 <img
                   src={profileImage}
                   alt="William Correa"
@@ -84,24 +138,11 @@ const Hero = ({ currentLang }: HeroProps) => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
               <span className="gradient-text block mb-2">{t.name}</span>
             </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8 text-balance leading-relaxed">
-              {currentLang === 'pt' ? (
-                <>
-                  <span className="text-foreground">Desenvolvedor</span>
-                  <span className="highlight-text mx-2">&</span>
-                  <span className="highlight-text">Palestrante</span>
-                  <span className="highlight-text mx-2">&</span>
-                  <span className="highlight-text">Professor</span>
-                </>
-              ) : (
-                <>
-                  <span className="text-foreground">Developer</span>
-                  <span className="highlight-text mx-2">&</span>
-                  <span className="highlight-text">Speaker</span>
-                  <span className="highlight-text mx-2">&</span>
-                  <span className="highlight-text">Teacher</span>
-                </>
-              )}
+            <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8 text-balance leading-relaxed min-h-[4rem] sm:min-h-[5rem] lg:min-h-[6rem] flex items-center justify-center lg:justify-start">
+              <span className="highlight-text">
+                {typedText}
+                <span className={`inline-block w-0.5 h-6 sm:h-8 lg:h-10 bg-current ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}></span>
+              </span>
             </h2>
             <p className="text-lg lg:text-xl text-foreground/70 mb-10 max-w-2xl text-balance leading-relaxed">
               {t.description}

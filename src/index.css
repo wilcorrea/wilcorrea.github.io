@@ -42,7 +42,7 @@
 
     /* Custom gradients for light mode */
     --gradient-primary: linear-gradient(135deg, hsl(235 70% 58%), hsl(270 60% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 30% 92%), hsl(235 40% 88%), hsl(270 35% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(235 50% 85%), hsl(270 45% 88%), hsl(320 40% 92%));
     --gradient-text-highlight: linear-gradient(135deg, hsl(270 60% 65%), hsl(320 70% 60%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
     
@@ -164,7 +164,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), transparent 70%);
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.15), transparent 70%);
     pointer-events: none;
   }
 

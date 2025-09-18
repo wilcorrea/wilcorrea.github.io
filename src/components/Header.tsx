@@ -24,7 +24,7 @@ const Header = ({ currentLang, onLanguageChange }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold gradient-text">
-            wil<span className="text-foreground">.</span>dev
+            wilcorrea<span className="text-foreground">.</span>dev
           </div>
 
           {/* Desktop Navigation */}

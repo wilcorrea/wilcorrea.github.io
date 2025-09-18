@@ -94,12 +94,18 @@ const Hero = ({ currentLang }: HeroProps) => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
-                onClick={scrollToContact}
                 className="glow-effect"
                 size="lg"
+                asChild
               >
-                {t.cta}
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <a 
+                  href="https://t.me/wilcorrea" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  {t.cta}
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
               </Button>
               <Button 
                 variant="hero" 

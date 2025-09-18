@@ -11,17 +11,17 @@ const Hero = ({ currentLang }: HeroProps) => {
     en: {
       greeting: "Hello, I'm",
       name: "William Correa",
-      title: "Software Developer & Tech Community Enthusiast",
-      description: "17+ years of experience crafting efficient solutions with PHP, TypeScript, and full-stack development. Passionate about collaborative environments and building robust software.",
+      title: "Software Developer, Speaker, Teacher & Instructor",
+      description: "17+ years of experience crafting efficient solutions with PHP, TypeScript, and full-stack development. Passionate about teaching, speaking at tech events, and building collaborative communities.",
       cta: "Let's Connect",
       downloadResume: "Download Resume",
       viewProjects: "View Projects"
     },
     pt: {
       greeting: "Olá, eu sou",
-      name: "William Correa",
-      title: "Desenvolvedor de Software & Entusiasta de Comunidades Tech",
-      description: "17+ anos de experiência criando soluções eficientes com PHP, TypeScript e desenvolvimento full-stack. Apaixonado por ambientes colaborativos e construção de software robusto.",
+      name: "William Correa", 
+      title: "Desenvolvedor de Software, Palestrante, Professor & Instrutor",
+      description: "17+ anos de experiência criando soluções eficientes com PHP, TypeScript e desenvolvimento full-stack. Apaixonado por ensinar, palestrar em eventos tech e construir comunidades colaborativas.",
       cta: "Vamos Conversar",
       downloadResume: "Baixar Currículo",
       viewProjects: "Ver Projetos"

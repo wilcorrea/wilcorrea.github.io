@@ -101,8 +101,19 @@ const Hero = ({ currentLang }: HeroProps) => {
                 {t.cta}
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="hero" size="lg">
-                {t.viewProjects}
+              <Button 
+                variant="hero" 
+                size="lg"
+                asChild
+              >
+                <a 
+                  href="https://devi.tools/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  {t.viewProjects}
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
 

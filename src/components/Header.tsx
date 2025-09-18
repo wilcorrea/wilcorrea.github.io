@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Globe, Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 interface HeaderProps {
   currentLang: string;
@@ -55,7 +56,7 @@ const Header = ({ currentLang, onLanguageChange }: HeaderProps) => {
             </button>
           </nav>
 
-          {/* Language Selector & Mobile Menu */}
+          {/* Language Selector, Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Globe className="h-4 w-4 text-muted-foreground" />
@@ -77,6 +78,9 @@ const Header = ({ currentLang, onLanguageChange }: HeaderProps) => {
                 PT
               </button>
             </div>
+
+            {/* Theme Toggle */}
+            <ThemeToggle />
 
             {/* Mobile Menu Button */}
             <Button

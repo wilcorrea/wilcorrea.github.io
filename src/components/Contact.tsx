@@ -48,21 +48,21 @@ const Contact = ({ currentLang }: ContactProps) => {
       icon: Mail,
       title: t.email,
       description: "hi@wilcorrea.dev",
-      action: "mailto:hi@wilcorrea.dev",
+      action: "https://t.me/wilcorrea",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: MessageCircle,
       title: t.schedule,
       description: currentLang === "pt" ? "Vamos marcar uma conversa" : "Let's schedule a chat",
-      action: "mailto:hi@wilcorrea.dev?subject=Schedule a Call",
+      action: "https://t.me/wilcorrea",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Coffee,
       title: t.coffee,
       description: currentLang === "pt" ? "Para um papo descontraído" : "For a casual conversation",
-      action: "mailto:hi@wilcorrea.dev?subject=Coffee Chat",
+      action: "https://t.me/wilcorrea",
       color: "from-amber-500 to-orange-500"
     }
   ];
@@ -121,7 +121,7 @@ const Contact = ({ currentLang }: ContactProps) => {
                     size="sm"
                     className="group-hover:glow-effect transition-all duration-300"
                   >
-                    <a href={method.action}>
+                    <a href={method.action} target="_blank" rel="noopener noreferrer">
                       {t.getInTouch}
                     </a>
                   </Button>

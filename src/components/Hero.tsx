@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, ExternalLink, Download } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 import { useState, useEffect } from "react";
 
@@ -91,6 +91,15 @@ const Hero = ({ currentLang }: HeroProps) => {
     }
   };
 
+  const downloadProfileImage = () => {
+    const link = document.createElement('a');
+    link.href = profileImage;
+    link.download = 'william-correa-profile.jpg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const socialLinks = [
     {
       icon: Github,
@@ -120,7 +129,7 @@ const Hero = ({ currentLang }: HeroProps) => {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20">
           {/* Profile Image */}
           <div className="animate-fade-in">
-            <div className="relative">
+            <div className="relative group">
               <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden card-elegant">
                 <img
                   src={profileImage}
@@ -129,6 +138,16 @@ const Hero = ({ currentLang }: HeroProps) => {
                 />
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-highlight/20 rounded-full blur-xl opacity-70 animate-pulse"></div>
+              
+              {/* Download Button */}
+              <button
+                onClick={downloadProfileImage}
+                className="absolute bottom-4 right-4 p-3 rounded-full bg-card/90 backdrop-blur-sm border border-border/30 hover:border-primary/50 hover:bg-card transition-all duration-300 opacity-0 group-hover:opacity-100 hover:glow-effect"
+                aria-label="Download profile image"
+                title="Download profile image"
+              >
+                <Download className="h-5 w-5 text-foreground/80 hover:text-primary transition-colors" />
+              </button>
             </div>
           </div>
 

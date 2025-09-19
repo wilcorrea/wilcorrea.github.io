@@ -31,7 +31,7 @@ const Footer = ({ currentLang }: FooterProps) => {
           </div>
           <div className="mt-4">
             <a
-              href="https://github.com/wilcorrea/wilcorrea.dev"
+              href="https://github.com/wilcorrea/wilcorrea.github.io"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"

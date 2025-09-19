@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Github } from "lucide-react";
 
 interface FooterProps {
   currentLang: string;
@@ -28,6 +28,17 @@ const Footer = ({ currentLang }: FooterProps) => {
               ? "Desenvolvedor • Professor • Palestrante • Organizador de Comunidade"
               : "Developer • Teacher • Speaker • Community Organizer"
             }
+          </div>
+          <div className="mt-4">
+            <a
+              href="https://github.com/wilcorrea/wilcorrea.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Github className="h-4 w-4" />
+              {currentLang === "pt" ? "Ver código no GitHub" : "View source on GitHub"}
+            </a>
           </div>
         </div>
       </div>

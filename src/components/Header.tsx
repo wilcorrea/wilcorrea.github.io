@@ -49,6 +49,12 @@ const Header = ({ currentLang, onLanguageChange }: HeaderProps) => {
               {currentLang === "pt" ? "Experiência" : "Experience"}
             </button>
             <button
+              onClick={() => scrollToSection("resume")}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {currentLang === "pt" ? "Currículo" : "Resume"}
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -115,6 +121,12 @@ const Header = ({ currentLang, onLanguageChange }: HeaderProps) => {
                 className="text-left text-muted-foreground hover:text-foreground transition-colors"
               >
                 {currentLang === "pt" ? "Experiência" : "Experience"}
+              </button>
+              <button
+                onClick={() => scrollToSection("resume")}
+                className="text-left text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {currentLang === "pt" ? "Currículo" : "Resume"}
               </button>
               <button
                 onClick={() => scrollToSection("contact")}

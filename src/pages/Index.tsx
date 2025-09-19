@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -37,6 +38,7 @@ const Index = () => {
         <Hero currentLang={currentLang} />
         <About currentLang={currentLang} />
         <Experience currentLang={currentLang} />
+        <Resume currentLang={currentLang} />
         <Contact currentLang={currentLang} />
       </main>
       <Footer currentLang={currentLang} />

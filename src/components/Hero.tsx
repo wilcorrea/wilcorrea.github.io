@@ -17,7 +17,7 @@ const Hero = ({ currentLang }: HeroProps) => {
       name: "William Correa",
       title: "Developer, Speaker, Teacher",
       typingTexts: ["Developer", "Speaker", "Teacher"],
-      description: "~20 years of experience crafting efficient solutions with PHP, TypeScript, and full-stack development. Passionate about teaching, speaking at tech events, and building collaborative communities.",
+      description: "~20 years of experience crafting efficient solutions with PHP, TypeScript, and full-stack development. Passionate about teaching, speaking at tech events, building collaborative communities, and exploring GenAI innovations.",
       cta: "Let's Connect",
       downloadResume: "Download Resume",
       viewProjects: "View Projects"
@@ -27,7 +27,7 @@ const Hero = ({ currentLang }: HeroProps) => {
       name: "William Correa", 
       title: "Desenvolvedor, Palestrante, Professor",
       typingTexts: ["Desenvolvedor", "Palestrante", "Professor"],
-      description: "~20 anos de experiência criando soluções eficientes com PHP, TypeScript e desenvolvimento full-stack. Apaixonado por ensinar, palestrar em eventos tech e construir comunidades colaborativas.",
+      description: "~20 anos de experiência criando soluções eficientes com PHP, TypeScript e desenvolvimento full-stack. Apaixonado por ensinar, palestrar em eventos tech, construir comunidades colaborativas e explorar inovações em GenAI.",
       cta: "Vamos Conversar",
       downloadResume: "Baixar Currículo",
       viewProjects: "Ver Projetos"

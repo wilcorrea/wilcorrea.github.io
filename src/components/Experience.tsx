@@ -179,14 +179,14 @@ const Experience = ({ currentLang }: ExperienceProps) => {
                     <>
                       Possui formação em Ciência da Computação e trabalha em todas as etapas 
                       do desenvolvimento de software, desde planejamento e execução até 
-                      infraestrutura. William é apaixonado por ambientes colaborativos e 
+                      infraestrutura. William é apaixonado por ambientes colaborativos, inovações em GenAI e 
                       está sempre procurando contribuir e aprender com comunidades de tecnologia.
                     </>
                   ) : (
                     <>
                       He holds a degree in Computer Science and works across all stages of 
                       software development, from planning and execution to infrastructure. 
-                      William is passionate about collaborative environments and is always 
+                      William is passionate about collaborative environments, GenAI innovations, and is always 
                       looking to contribute to and learn from technology communities.
                     </>
                   )}

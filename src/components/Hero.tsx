@@ -125,7 +125,7 @@ const Hero = ({ currentLang }: HeroProps) => {
 
   return (
     <section id="home" className="hero-section flex items-center justify-center overflow-hidden">
-      <div className="container mx-auto px-4 pt-28 pb-20 sm:py-20 relative z-10">
+      <div className="container mx-auto px-4 pt-32 pb-20 sm:py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20">
           {/* Profile Image */}
           <div className="animate-fade-in">

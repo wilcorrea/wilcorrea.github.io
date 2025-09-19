@@ -44,20 +44,12 @@ const Resume = ({ currentLang }: ResumeProps) => {
           technologies: "Ruby, Rails, Android, Kotlin, Swift"
         },
         {
-          title: "Full-stack Developer, SRE & Solution Architect",
-          company: "Flix SRO",
-          period: "07/2018 - 12/2021",
-          location: "Remote",
-          description: "Organized and optimized management of a large portfolio of products and services. Created and maintained projects in biotechnology, financial services, e-commerce, affiliates, digital token analysis, while maintaining infrastructure and cost management.",
-          technologies: "PHP, Laravel, Docker, Terraform, AWS (RDS, SQS, SNS, S3), Vue.js, TypeScript"
-        },
-        {
-          title: "Freelance Developer",
+          title: "Freelance Developer & Solution Architect",
           company: "Dracones",
           period: "05/2016 - Current",
           location: "Remote",
-          description: "End-to-end application development for clients including Brazilian Parachuting Confederation, Enpecel, Tigoo, Cyerlabs. From requirements gathering to code implementation and infrastructure provisioning.",
-          technologies: "PHP, Laravel, Symfony, MySQL, Vue.js, TypeScript, Docker, AWS, GCP"
+          description: "End-to-end application development for clients including Flix SRO, Brazilian Parachuting Confederation, Enpecel, Tigoo, Cyerlabs. For Flix SRO (2018-2021), organized and optimized management of a large portfolio of products and services, creating projects in biotechnology, financial services, e-commerce, affiliates, and digital token analysis. From requirements gathering to code implementation and infrastructure provisioning.",
+          technologies: "PHP, Laravel, Symfony, Slim, MySQL, Vue.js, TypeScript, Quasar Framework, Docker, Terraform, AWS (RDS, SQS, SNS, S3), GCP, Digital Ocean"
         }
       ],
       communityItems: [
@@ -111,20 +103,12 @@ const Resume = ({ currentLang }: ResumeProps) => {
           technologies: "Ruby, Rails, Android, Kotlin, Swift"
         },
         {
-          title: "Desenvolvedor Full-stack, SRE e Arquiteto de Soluções",
-          company: "Flix SRO",
-          period: "07/2018 - 12/2021",
-          location: "Remoto",
-          description: "Organizei e otimizei a gestão do grande parque de produtos e serviços para atuar com um time reduzido. Criei e mantive projetos nas áreas de: biotecnologia, serviços financeiros, e-commerces, afiliados, análises de tokens digitais, bem como mantive a infraestrutura e manutenção dos custos.",
-          technologies: "PHP, Laravel, Docker, Terraform, AWS (RDS, SQS, SNS, S3), Vue.js, TypeScript"
-        },
-        {
-          title: "Desenvolvedor Freelance",
+          title: "Desenvolvedor Freelance e Arquiteto de Soluções",
           company: "Dracones", 
           period: "05/2016 - Atualmente",
           location: "Remoto",
-          description: "Desenvolvimento ponta a ponta de aplicações para clientes como a Confederação Brasileira de Paraquedismo, Enpecel, Tigoo, Cyerlabs, indo desde o levantamento de requisitos, até a implementação do código e o provisionamento da infraestrutura.",
-          technologies: "PHP, Laravel, Symfony, MySQL, Vue.js, TypeScript, Docker, AWS, GCP"
+          description: "Desenvolvimento ponta a ponta de aplicações para clientes incluindo Flix SRO, Confederação Brasileira de Paraquedismo, Enpecel, Tigoo, Cyerlabs. Para a Flix SRO (2018-2021), organizei e otimizei a gestão do grande parque de produtos e serviços, criando projetos nas áreas de biotecnologia, serviços financeiros, e-commerces, afiliados e análises de tokens digitais. Desde levantamento de requisitos até implementação do código e provisionamento da infraestrutura.",
+          technologies: "PHP, Laravel, Symfony, Slim, MySQL, Vue.js, TypeScript, Quasar Framework, Docker, Terraform, AWS (RDS, SQS, SNS, S3), GCP, Digital Ocean"
         }
       ],
       communityItems: [

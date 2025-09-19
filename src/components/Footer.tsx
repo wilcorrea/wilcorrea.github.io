@@ -25,8 +25,8 @@ const Footer = ({ currentLang }: FooterProps) => {
           </div>
           <div className="text-sm text-muted-foreground">
             {currentLang === "pt" 
-              ? "Desenvolvedor de Software • Entusiasta de Comunidades Tech"
-              : "Software Developer • Tech Community Enthusiast"
+              ? "Desenvolvedor • Professor • Palestrante • Gerente de Comunidade"
+              : "Developer • Teacher • Speaker • Community Manager"
             }
           </div>
         </div>

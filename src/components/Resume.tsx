@@ -130,10 +130,15 @@ const Resume = ({ currentLang }: ResumeProps) => {
 
   const t = content[currentLang as keyof typeof content];
 
-  const downloadResume = () => {
+  const downloadResume = (language: 'pt' | 'en') => {
     const link = document.createElement('a');
-    link.href = '/william-correa-resume-pt.pdf';
-    link.download = 'william-correa-resume.pdf';
+    if (language === 'pt') {
+      link.href = '/william-correa-resume-pt.pdf';
+      link.download = 'william-correa-resume-pt.pdf';
+    } else {
+      link.href = '/william-correa-resume-en.pdf';
+      link.download = 'william-correa-resume-en.pdf';
+    }
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -150,14 +155,24 @@ const Resume = ({ currentLang }: ResumeProps) => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             {t.subtitle}
           </p>
-          <Button
-            onClick={downloadResume}
-            className="glow-effect"
-            size="lg"
-          >
-            <Download className="mr-2 h-5 w-5" />
-            {t.downloadResume}
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={() => downloadResume('pt')}
+              className="glow-effect"
+              size="lg"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              {currentLang === 'pt' ? 'Download Currículo (PT-BR)' : 'Download Resume (PT-BR)'}
+            </Button>
+            <Button
+              onClick={() => downloadResume('en')}
+              variant="outline"
+              size="lg"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              {currentLang === 'pt' ? 'Download Currículo (EN)' : 'Download Resume (EN)'}
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -48,7 +48,7 @@ const Resume = ({ currentLang }: ResumeProps) => {
           company: "Dracones",
           period: "05/2016 - Current",
           location: "Remote",
-          description: "End-to-end application development for clients including Flix SRO, Brazilian Parachuting Confederation, Enpecel, Tigoo, Cyerlabs. For Flix SRO (2018-2021), organized and optimized management of a large portfolio of products and services, creating projects in biotechnology, financial services, e-commerce, affiliates, and digital token analysis. From requirements gathering to code implementation and infrastructure provisioning.",
+          description: "Application development for clients as Brazilian Parachuting Confederation, Enpecel, Tigoo and Cyerlabs. It includes a large portfolio of products and services, creating projects in biotechnology, financial services, e-commerce, affiliates, and digital token analysis. From requirements gathering to code implementation and infrastructure provisioning.",
           technologies: "PHP, Laravel, Symfony, Slim, MySQL, Vue.js, TypeScript, Quasar Framework, Docker, Terraform, AWS (RDS, SQS, SNS, S3), GCP, Digital Ocean"
         }
       ],

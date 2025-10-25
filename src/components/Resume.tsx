@@ -44,7 +44,7 @@ const Resume = ({ currentLang }: ResumeProps) => {
           technologies: "Ruby, Rails, Android, Kotlin, Swift"
         },
         {
-          title: "Freelance Developer & Solution Architect",
+          title: "Freelance Developer & Solutions Architect",
           company: "Dracones",
           period: "05/2016 - Current",
           location: "Remote",
